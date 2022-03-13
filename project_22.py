@@ -46,6 +46,8 @@ def check_credentials():
     canvas_write_denied = "Access denied"
     font_type = "Courier"
     font_grootte = 8
+    
+
 
 
 
@@ -70,6 +72,8 @@ def check_input():
     lengte = turtle.numinput(title, tekst_lengte)
     breedte = turtle.numinput(title, tekst_breedte)
     hoogte = turtle.numinput(title, tekst_hoogte)
+    
+
 
 
 
@@ -174,10 +178,7 @@ def tekst_in_tekstveld():
     font_grootte = 8
     volume_macht = 3
     turtle_x = 50
-    turtle_y = 200
-
-
-    
+    turtle_y = 200   
 
     if breedte == lengte and breedte == hoogte:
         vorm = "kubus"
@@ -185,8 +186,7 @@ def tekst_in_tekstveld():
     else:
         vorm = "balk"
         volume = str(int(lengte * breedte * hoogte))
-        
-        
+                
     tekst = " Het object is een " + vorm + " en de volume is " + volume + " kubieke meter. "
     
     turtle.goto(turtle_x, turtle_y)
@@ -291,15 +291,15 @@ def main():
     if (user != user1 or userpass != userpass1):
         turtle.write(canvas_write_denied, font= (font_type, font_grootte))
     else:
-        check_input()
+        check_input()  
         if lengte <= 75 and breedte <= 25 and hoogte <= 25:
             canvas_app()
             tekst_in_tekstveld()
             object_display()
-
         else:
-            turtle.write(canvas_write_denied, font = (font_type, font_grootte))
+            turtle.write(canvas_write_denied, font= (font_type, font_grootte))
+            
+
 
 main()        
-
 turtle.done()
